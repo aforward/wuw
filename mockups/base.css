@@ -10,6 +10,10 @@ body {
   font-size: 25px;
 }
 
+.container h1, .container h2 {
+  margin: 0;
+}
+
 a.inline-link {
   color: #2c3e50;
 }
@@ -37,26 +41,37 @@ a.inline-link:hover {
   background-color: #d35400;
 }
 
-.claim-account input, .claim-account button {
+.form input, .form button {
   font-size: 20px;
   font-family: "Whitney A", "Whitney B", Avenir, Helvetica,sans-serif;
   border: 1px solid #3F4649;
   color: #1B98E0;  
   padding: 10px;
   border-radius: 3px;
-  display: block;
   margin: 10px 0 10px 0;
-  width: 400px;
 }
 
-.claim-account button {
+.form button {
   cursor: pointer;
 }
 
-.claim-account button:hover {
+.form button:hover {
   background-color: #f39c12;r
 }
 
-.claim-account .inputs {
+.form .inputs {
   margin: 10px 0 10px 0;
+}
+
+.claim-account input, .claim-account button {
+  display: block;
+  width: 400px;
+}
+
+.add-account input.long, .add-account button.long {
+  width: 400px;
+}
+
+.add-account input.short, .add-account button.short {
+  width: 200px;
 }
