@@ -9,7 +9,7 @@ defmodule Biz do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: Biz.Worker.start_link(arg1, arg2, arg3)
-      # worker(Biz.Worker, [arg1, arg2, arg3]),
+      worker(Biz.Worker, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
@@ -17,4 +17,7 @@ defmodule Biz do
     opts = [strategy: :one_for_one, name: Biz.Supervisor]
     Supervisor.start_link(children, opts)
   end
+
+  defdelegate ping, to: Biz.Worker
+
 end

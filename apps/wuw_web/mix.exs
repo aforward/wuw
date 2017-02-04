@@ -26,7 +26,7 @@ defmodule WuwWeb.Mixfile do
 
   defp applications(:dev), do: applications(:all) ++ [:mix_test_watch]
   defp applications(:test), do: applications(:dev)
-  defp applications(_), do: [:logger, :cowboy, :ecto, :postgrex]
+  defp applications(_), do: [:logger, :cowboy, :ecto, :postgrex, :biz]
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
@@ -46,6 +46,7 @@ defmodule WuwWeb.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:ecto, "~> 2.1.3"},
-     {:postgrex, ">= 0.13.0"}]
+     {:postgrex, ">= 0.13.0"},
+     {:biz, in_umbrella: true}]
   end
 end
