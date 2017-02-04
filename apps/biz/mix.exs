@@ -18,24 +18,22 @@ defmodule Biz.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: applications(Mix.env),
      mod: {Biz, []}]
   end
 
-  # Dependencies can be Hex packages:
+  defp applications(:dev), do: applications(:all) ++ [:mix_test_watch]
+  defp applications(:test), do: applications(:dev)
+  defp applications(_), do: [:logger, :ecto, :postgrex]
+
+  # Specifies your project dependencies.
   #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # To depend on another app inside the umbrella:
-  #
-  #   {:myapp, in_umbrella: true}
-  #
-  # Type "mix help deps" for more examples and options
+  # Type `mix help deps` for examples and options.
   defp deps do
-    []
+    [{:mix_test_watch, "~> 0.3", only: [:dev, :test]},
+     {:ex_doc, "~> 0.14", only: :dev},
+     {:ecto, "~> 2.1.3"},
+     {:postgrex, ">= 0.13.0"}]
   end
+
 end
