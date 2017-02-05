@@ -1,38 +1,18 @@
-<div class="inner">
-  <form class="form bordered">
-    <h2>Bank Account(s)</h2>
-    <div class="bunch">
-      <div class="field long">
-        <label>Name</label>
-        <input type="input" placeholder="e.g. PCF Checking, Scotiabank XXX90210" />
-      </div>
-      <div class="field short">
-        <label>Current Balance</label>
-        <input type="input" placeholder="e.g. $10,000" />
-      </div>
-    </div>
-    <div class="bunch">
-      <div class="field long">
-        <label>Name</label>
-        <input type="input" placeholder="e.g. PCF Checking, Scotiabank XXX90210" />
-      </div>
-      <div class="field short">
-        <label>Current Balance</label>
-        <input type="input" placeholder="e.g. $10,000" />
-      </div>
-    </div>
-    <div class="bunch">
-      <div class="field long">
-        <label>Name</label>
-        <input type="input" placeholder="e.g. PCF Checking, Scotiabank XXX90210" />
-      </div>
-      <div class="field short">
-        <label>Current Balance</label>
-        <input type="input" placeholder="e.g. $10,000" />
-      </div>
-    </div>
-    <div class="buttons">
-      <button>Add Accounts</button>
-    </div>
-  </form>
+<div class="homepage">
+  <div class="logo"><span class="w">W</span><span class="u">U</span><span class="w">W</span></div>
+  <h1 class="subtitle">What are you worth?</h1>
+
+  <div class="btn-uuge">
+    <button>Let's Find Out</button>
+  </div>
+
+  <p>
+    You actually might not need a budget, especially if that budget isn't putting enough towards savings
+    and financial freedom.
+  </p>
+
+  <p>
+    By calculating your net worth each month, you can better forecast how well you are improving (or,
+    ouch, possibly how much you should really improve).
+  </p>
 </div>
