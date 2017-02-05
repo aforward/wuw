@@ -17,6 +17,9 @@ defmodule WuwWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    post "/", UserController, :create
+    get "/u/:uuid", UserController, :index
   end
 
   # Other scopes may use custom stacks.
