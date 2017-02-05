@@ -13,4 +13,16 @@ defmodule Biz.UserTest do
     assert changeset.valid?
   end
 
+  test "create_guest" do
+    user = User.create_guest
+    assert user.uuid != nil
+    assert User.by_uuid(user.uuid) == user
+  end
+
+  test "by_uuid" do
+    assert nil == User.by_uuid("7416aa18-d927-4adc-9891-bc45ebcfc4b7")
+    assert nil == User.by_uuid("99")
+  end
+
 end
+
