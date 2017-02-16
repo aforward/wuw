@@ -16,4 +16,11 @@ defmodule WuwWeb.UserController do
     |> put_session(:user, guest.uuid)
     |> redirect(to: user_path(conn, :index, guest.uuid))
   end
+
+  def logout(conn, _params) do
+    conn 
+    |> delete_session(:user)
+    |> redirect(to: page_path(conn, :index))
+  end  
+
 end

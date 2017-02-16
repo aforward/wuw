@@ -19,6 +19,7 @@ defmodule WuwWeb.Router do
     get "/", PageController, :index
 
     post "/", UserController, :create
+    get "/logout", UserController, :logout
     get "/u/:uuid", UserController, :index
   end
 

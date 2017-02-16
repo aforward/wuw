@@ -1,0 +1,10 @@
+<header class="header">
+  <nav class="inner">
+    <div class="left">
+      <img src="/images/logo_text.png" alt="WuW Logo">
+    </div>
+    <div class="right">
+      <%= link "Sign Out", to: user_path(@conn, :logout) %>
+    </div>
+  </nav>
+</header>
