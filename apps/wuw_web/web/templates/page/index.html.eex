@@ -1,5 +1,5 @@
 <div class="homepage">
-  <div class="logo"><span class="w">W</span><span class="u">U</span><span class="w">W</span></div>
+  <%= render WuwWeb.LayoutView, "logo.html", assigns %>
   <h1 class="subtitle">What are you worth?</h1>
 
   <div class="btn-uuge">

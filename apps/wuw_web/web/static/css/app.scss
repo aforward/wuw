@@ -2,6 +2,26 @@
 @import "_scss/variables";
 
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix { 
+  display: inline-block; 
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
 .homepage {
   min-width: 200px;
   max-width: 600px;
@@ -34,6 +54,7 @@
       border: 0px;
       color: $light-grey;
       font-size: 25px;
+      border-radius: 5px;
 
       &:hover {
         background-color: darken($medium-blue, 10%);
@@ -46,7 +67,7 @@
     }
   }
 
-  .logo {
+  .wuw-logo {
     font-family: $logo-font-family;
     color: $medium-blue;
     margin: 100px auto 30px auto;
