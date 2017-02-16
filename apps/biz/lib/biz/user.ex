@@ -9,7 +9,7 @@ defmodule Biz.User do
     field :email, :string
     field :role, :string
     field :status, :string
-    timestamps
+    timestamps()
   end
 
   @doc """

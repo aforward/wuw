@@ -8,7 +8,7 @@ defmodule WuwWeb.Mixfile do
      config_path: "../../config/config.exs",
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
-     elixir: "~> 1.2",
+     elixir: "~> 1.4.1",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -24,8 +24,6 @@ defmodule WuwWeb.Mixfile do
      mod: {WuwWeb, []}]
   end
 
-  defp applications(:dev), do: applications(:all) ++ [:mix_test_watch]
-  defp applications(:test), do: applications(:dev)
   defp applications(_), do: [:logger, :cowboy, :ecto, :postgrex, :biz]
 
   # Specifies which paths to compile per environment.
@@ -41,7 +39,7 @@ defmodule WuwWeb.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_ecto, "~> 3.2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:mix_test_watch, "~> 0.3", only: [:dev, :test]},
+     {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
      {:ex_doc, "~> 0.14", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},

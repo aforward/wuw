@@ -10,7 +10,7 @@ defmodule Biz.Worker do
   ### Server Callbacks
 
   def init(_) do
-    {:ok, zero_state}
+    {:ok, zero_state()}
   end
 
   def handle_call(:ping, _from, state) do
