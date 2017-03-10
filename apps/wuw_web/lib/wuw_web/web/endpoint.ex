@@ -1,7 +1,7 @@
-defmodule WuwWeb.Endpoint do
+defmodule WuwWeb.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :wuw_web
 
-  socket "/socket", WuwWeb.UserSocket
+  socket "/socket", WuwWeb.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +38,5 @@ defmodule WuwWeb.Endpoint do
     key: "_wuw_web_key",
     signing_salt: "xmNqSwJ0"
 
-  plug WuwWeb.Router
+  plug WuwWeb.Web.Router
 end

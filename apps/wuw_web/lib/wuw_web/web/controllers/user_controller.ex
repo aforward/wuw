@@ -1,4 +1,4 @@
-defmodule WuwWeb.UserController do
+defmodule WuwWeb.Web.UserController do
   use WuwWeb.Web, :controller
   alias Biz.{User}
 

@@ -24,16 +24,17 @@ defmodule WuwWeb.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, namespace: WuwWeb.Web
 
-      import WuwWeb.Router.Helpers
-      import WuwWeb.Gettext
+      import WuwWeb.Web.Router.Helpers
+      import WuwWeb.Web.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/wuw_web/web/templates",
+                        namespace: WuwWeb.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -41,9 +42,9 @@ defmodule WuwWeb.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import WuwWeb.Router.Helpers
-      import WuwWeb.ErrorHelpers
-      import WuwWeb.Gettext
+      import WuwWeb.Web.Router.Helpers
+      import WuwWeb.Web.ErrorHelpers
+      import WuwWeb.Web.Gettext
     end
   end
 
@@ -56,7 +57,7 @@ defmodule WuwWeb.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import WuwWeb.Gettext
+      import WuwWeb.Web.Gettext
     end
   end
 

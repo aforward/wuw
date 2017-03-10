@@ -1,4 +1,4 @@
-defmodule WuwWeb.ChannelCase do
+defmodule WuwWeb.Web.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -22,7 +22,7 @@ defmodule WuwWeb.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint WuwWeb.Endpoint
+      @endpoint WuwWeb.Web.Endpoint
     end
   end
 

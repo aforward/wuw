@@ -20,10 +20,10 @@ defmodule WuwWeb.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      import WuwWeb.Router.Helpers
+      import WuwWeb.Web.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint WuwWeb.Endpoint
+      @endpoint WuwWeb.Web.Endpoint
     end
   end
 

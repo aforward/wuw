@@ -1,4 +1,4 @@
-defmodule WuwWeb.Router do
+defmodule WuwWeb.Web.Router do
   use WuwWeb.Web, :router
 
   pipeline :browser do
@@ -13,7 +13,7 @@ defmodule WuwWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", WuwWeb do
+  scope "/", WuwWeb.Web do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index

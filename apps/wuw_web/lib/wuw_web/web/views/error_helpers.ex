@@ -1,4 +1,4 @@
-defmodule WuwWeb.ErrorHelpers do
+defmodule WuwWeb.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """

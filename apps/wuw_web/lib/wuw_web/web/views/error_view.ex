@@ -1,4 +1,4 @@
-defmodule WuwWeb.ErrorView do
+defmodule WuwWeb.Web.ErrorView do
   use WuwWeb.Web, :view
 
   def render("404.html", _assigns) do
