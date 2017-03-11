@@ -7,7 +7,7 @@ defmodule Biz.Repo.Migrations.CreateUsers do
       add :email, :string
       add :role, :string
       add :status, :string
-      timestamps
+      timestamps()
     end
   end
 

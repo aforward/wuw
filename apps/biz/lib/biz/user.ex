@@ -34,7 +34,6 @@ defmodule Biz.User do
   @doc """
   Look up a user by his/her UUID
   """
-  
   def by_uuid(uuid) when is_binary(uuid), do: by_uuid(Ecto.UUID.cast(uuid))
   def by_uuid(:error), do: nil
   def by_uuid({:ok, uuid}), do: Repo.get_by(User, uuid: uuid)
