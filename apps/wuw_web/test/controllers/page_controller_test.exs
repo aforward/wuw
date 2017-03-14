@@ -1,4 +1,4 @@
-defmodule WuwWeb.PageControllerTest do
+defmodule WuwWeb.Web.PageControllerTest do
   use WuwWeb.ConnCase
 
   test "GET /", %{conn: conn} do

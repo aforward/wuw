@@ -28,6 +28,10 @@ defmodule WuwWeb.Web do
 
       import WuwWeb.Web.Router.Helpers
       import WuwWeb.Web.Gettext
+
+      import WuwWeb.Web.Controllers.Helper,
+        only: [
+          ensure_user: 2]
     end
   end
 

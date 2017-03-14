@@ -18,9 +18,9 @@ defmodule WuwWeb.Web.UserController do
   end
 
   def logout(conn, _params) do
-    conn 
+    conn
     |> delete_session(:user)
     |> redirect(to: page_path(conn, :index))
-  end  
+  end
 
 end

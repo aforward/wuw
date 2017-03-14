@@ -1,0 +1,39 @@
+<h2>Account</h2>
+<p>
+  Let's start by describing all your bank accounts, retirement accounts,
+  credit cards, car loans, personal loans, mortgages.
+</p>
+
+<%= form_for Biz.Account.changeset(%Biz.Account{}),
+             account_path(@conn, :create, @user.uuid),
+             [class: "form bordered frm-create-account"],
+             fn f -> %>
+
+  <div class="bunch">
+    <div class="field long">
+      <%= label f, :name, "Name" %>
+      <%= text_input f, :name, placeholder: "e.g. PCF Checking, Scotiabank XXX90210" %>
+    </div>
+    <div class="field short">
+      <%= label f, :amount, "Current Balance" %>
+      <%= text_input f, :amount, placeholder: "e.g. $10,000" %>
+    </div>
+    <div class="field short">
+      <%= label f, :type, "Type of Account" %>
+      <%= text_input f, :type, placeholder: "e.g. Cash", list: "accountTags" %>
+      <datalist id="accountTags">
+        <option>Cash</option>
+        <option>Retirement</option>
+        <option>Stocks</option>
+        <option>Real Estate</option>
+        <option>Debt</option>
+      </datalist>
+    </div>
+  </div>
+  <div class="buttons">
+    <button class="btn-create-account ready">
+      Add Account
+    </button>
+  </div>
+
+<% end %>

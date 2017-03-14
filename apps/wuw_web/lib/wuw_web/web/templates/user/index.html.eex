@@ -6,42 +6,8 @@
 <div class="body">
 
   <div class="inner">
-    <form class="form bordered">
-      <h2>Bank Account(s)</h2>
-      <div class="bunch">
-        <div class="field long">
-          <label>Name</label>
-          <input type="input" placeholder="e.g. PCF Checking, Scotiabank XXX90210" />
-        </div>
-        <div class="field short">
-          <label>Current Balance</label>
-          <input type="input" placeholder="e.g. $10,000" />
-        </div>
-      </div>
-      <div class="bunch">
-        <div class="field long">
-          <label>Name</label>
-          <input type="input" placeholder="e.g. PCF Checking, Scotiabank XXX90210" />
-        </div>
-        <div class="field short">
-          <label>Current Balance</label>
-          <input type="input" placeholder="e.g. $10,000" />
-        </div>
-      </div>
-      <div class="bunch">
-        <div class="field long">
-          <label>Name</label>
-          <input type="input" placeholder="e.g. PCF Checking, Scotiabank XXX90210" />
-        </div>
-        <div class="field short">
-          <label>Current Balance</label>
-          <input type="input" placeholder="e.g. $10,000" />
-        </div>
-      </div>
-      <div class="buttons">
-        <button>Add Accounts</button>
-      </div>
-    </form>
+    <%= render WuwWeb.Web.AccountView, "new.html", assigns %>
+    <%= render WuwWeb.Web.AccountView, "list_container.html", assigns %>
   </div>
 
 </div>

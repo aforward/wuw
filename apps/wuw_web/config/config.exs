@@ -5,6 +5,8 @@
 # is restricted to this project.
 use Mix.Config
 
+config :wuw_web, ecto_repos: []
+
 # Configures the endpoint
 config :wuw_web, WuwWeb.Web.Endpoint,
   url: [host: "localhost"],

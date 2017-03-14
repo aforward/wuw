@@ -38,4 +38,12 @@ defmodule Biz.User do
   def by_uuid(:error), do: nil
   def by_uuid({:ok, uuid}), do: Repo.get_by(User, uuid: uuid)
 
+  @doc """
+  Look up a user's accounts
+  """
+  def accounts(%User{id: id}) do
+    []
+  end
+
+
 end

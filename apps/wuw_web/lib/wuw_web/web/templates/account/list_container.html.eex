@@ -1,0 +1,2 @@
+<div class="accounts-list" data-action="<%= account_path(@conn, :list, @conn.assigns[:user].uuid) %>">
+</div>

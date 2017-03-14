@@ -14,14 +14,27 @@ defmodule WuwWeb.Web.Router do
   end
 
   scope "/", WuwWeb.Web do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
 
     post "/", UserController, :create
     get "/logout", UserController, :logout
     get "/u/:uuid", UserController, :index
+
   end
+
+  scope "/api", WuwWeb.Web do
+    pipe_through :api
+    post "/u/:uuid/account", AccountController, :create
+  end
+
+  scope "/hpi", WuwWeb.Web do
+    pipe_through :browser
+
+    get "/u/:uuid/accounts", AccountController, :list
+  end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", WuwWeb do

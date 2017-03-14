@@ -1,0 +1,95 @@
+
+.bordered {
+  border: 1px solid $light-blue;
+  border-radius: 10px;
+  padding: 10px 40px 10px 40px;
+}
+
+.form {
+
+  h1, h2 {
+    color: #34495e;
+  }
+
+  .bunch {
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    margin-top: 0px;
+  }
+
+  input, button {
+    font-size: 15px;
+    font-family: "Whitney A", "Whitney B", Avenir, Helvetica,sans-serif;
+
+    border-radius: 3px;
+    margin: 4px 0 10px 0;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    color: #1B98E0;
+    border: 1px solid $light-blue;
+
+    &:active, &:focus {
+      outline: 0px;
+      border: 1px solid $medium-blue;
+    }
+  }
+
+  button {
+    padding: 10px 30px 10px 30px;
+
+    &.ready {
+      background-color: $medium-blue;
+      color: $light-grey;
+      border: 1px solid $medium-blue;
+      &:active, &:focus, &:hover {
+        outline: 0px;
+        color: $medium-blue;
+        background-color: $light-grey;
+        border: 1px solid $medium-blue;
+      }
+    }
+
+    &.waiting {
+      background: url("/images/spin.svg") no-repeat top center;
+      background-size: contain;
+      background-color: $light-grey;
+      color: darken($light-grey, 10%);
+      border: 1px solid $medium-blue;
+      cursor: default;
+      &:active, &:focus, &:hover {
+        outline: 0px;
+        background-color: $light-grey;
+        color: darken($light-grey, 10%);
+      }
+
+    }
+  }
+}
+
+
+// .spinner {
+//     opacity: 0;
+//     display:none;
+//     width: 20px;
+//     height:10px;
+//     -webkit-transition: opacity 0.25s, max-width 0.45s;
+//     -moz-transition: opacity 0.25s, max-width 0.45s;
+//     -o-transition: opacity 0.25s, max-width 0.45s;
+//     transition: opacity 0.25s, max-width 0.45s;
+//     /* Duration fixed since we animate additional hidden width */
+// }
+
+// .has-spinner.active {
+//   cursor:progress;
+//   .spinner {
+//     display:inline-block;
+//     opacity: 1;
+//     max-width: 50px;
+//     /* More than it will ever come, notice that this affects on animation duration */
+//   }
+// }

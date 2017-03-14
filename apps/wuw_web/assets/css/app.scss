@@ -1,5 +1,6 @@
 @import "_scss/reset";
 @import "_scss/variables";
+@import "_scss/forms";
 
 
 .left {
@@ -10,8 +11,8 @@
   float: right;
 }
 
-.clearfix { 
-  display: inline-block; 
+.clearfix {
+  display: inline-block;
   &:after {
     visibility: hidden;
     display: block;
@@ -87,60 +88,12 @@
 
 /* OLD RAW STYLES */
 
-.bordered { 
-  border: 1px solid #e5eff5;
-  border-radius: 10px;
-  padding: 10px 40px 30px 40px;
-}
-
-.form h1, .form h2 {
-  color: #34495e;
-}
-.form input, .form button {
-  font-size: 15px;
-  font-family: "Whitney A", "Whitney B", Avenir, Helvetica,sans-serif;
-  border: 1px solid #e5eff5;
-  
-  border-radius: 3px;
-  margin: 4px 0 10px 0;
-}
-
-.form input {
-  width: 100%;
-  padding: 10px;
-  color: #1B98E0;
-}
-
-.form button {
-  padding: 10px 30px 10px 30px;
-  background-color: #3498db;
-  color: #ecf0f1;
-}
-
-.form button:active, .form button:focus {
-  outline: 0px;
-  color: #3498db;
-  background-color: #ecf0f1;
-}
-
-
 .long {
   max-width: 500px;
 }
 
 .short {
   max-width: 200px;
-}
-
-.form input:active, .form input:focus {
-  border: 1px solid #1B98E0;
-  outline: 0px;
-}
-
-.form button:hover {
-  color: #3498db;
-  background-color: #ecf0f1;
-  border: 1px solid #3498db;
 }
 
 
@@ -150,12 +103,4 @@
   margin: 0 0 0 2px;
   display: block;
   font-size: 15px;
-}
-
-.form .bunch {
-  margin-bottom: 20px;
-}
-
-.form .buttons {
-  margin-top: 0px;
 }

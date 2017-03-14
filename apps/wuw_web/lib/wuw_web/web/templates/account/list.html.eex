@@ -1,0 +1,22 @@
+<%= if Enum.count(@accounts) == 0 do %>
+  <p>No accounts yet.</p>
+<%= else %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for account <- @accounts do %>
+        <tr>
+          <td><%= account.name %></th>
+          <td><%= account.amount %></th>
+          <td><%= account.type %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
