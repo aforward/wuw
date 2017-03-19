@@ -45,6 +45,7 @@ defmodule WuwWeb.Mixfile do
      {:cowboy, "~> 1.0"},
      {:ecto, "~> 2.1.3"},
      {:postgrex, ">= 0.13.0"},
+     {:number, "~> 0.5.1"},
      {:biz, in_umbrella: true}]
   end
 end
