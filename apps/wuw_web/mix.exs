@@ -39,7 +39,7 @@ defmodule WuwWeb.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_ecto, "~> 3.2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
+     {:mix_test_watch, github: "aforward/mix-test.watch", only: :dev, runtime: false},
      {:ex_doc, "~> 0.14", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},

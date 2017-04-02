@@ -14,6 +14,14 @@ config :wuw_web, WuwWeb.Web.Endpoint,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
                     cd: Path.expand("../assets", __DIR__)]]
 
+config :mix_test_watch,
+  setup_tasks: [
+    "ecto.drop --quiet",
+    "ecto.create --quiet",
+    "ecto.migrate",
+  ],
+  ansi_enabled: :ignore,
+  clear: true
 
 # Watch static and templates for browser reloading.
 config :wuw_web, WuwWeb.Web.Endpoint,

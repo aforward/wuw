@@ -7,3 +7,12 @@ config :biz, Biz.Repo, [
   password: "",
   hostname: "localhost",
 ]
+
+config :mix_test_watch,
+  setup_tasks: [
+    "ecto.drop --quiet",
+    "ecto.create --quiet",
+    "ecto.migrate",
+  ],
+  ansi_enabled: :ignore,
+  clear: true
