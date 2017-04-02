@@ -38,7 +38,16 @@ defmodule Biz.Account do
   Find the latest accounts for the provided user
   """
   def latest_for(%User{id: id}) do
-    Repo.all(from(p in Account, where: p.user_id == ^id, order_by: p.type))
+    Repo.all(from(a in Account, where: a.user_id == ^id, order_by: [a.type, a.name]))
+    |> group_accounts
+  end
+
+  defp group_accounts(accounts), do: group_accounts(%{}, accounts)
+  defp group_accounts(answer, []), do: answer
+  defp group_accounts(answer, [account|remaining]) do
+    answer
+    |> Map.update(account.type, [account], &(&1 ++ [account]))
+    |> group_accounts(remaining)
   end
 
 end

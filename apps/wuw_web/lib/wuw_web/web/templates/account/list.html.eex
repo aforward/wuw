@@ -1,24 +1,28 @@
-<%= if Enum.count(@accounts) == 0 do %>
+<%= if Enum.count(@grouped_accounts) == 0 do %>
   <p>No accounts yet.</p>
 <%= else %>
-  <div class="bordered">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Amount</th>
-          <th>type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= for account <- @accounts do %>
+  <div class="bordered last-group">
+
+    <%= for {type, accounts} <- @grouped_accounts do %>
+    <div class="account-group">
+      <h3><%= type %></h3>
+      <table class="table">
+        <thead>
           <tr>
-            <td><%= account.name %></th>
-            <td><%= format_money(account.amount) %></th>
-            <td><%= account.type %></th>
+            <th>Name</th>
+            <th>Amount</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <%= for account <- accounts do %>
+            <tr>
+              <td><%= account.name %></th>
+              <td><%= format_money(account.amount) %></th>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <% end %>
   </div>
 <% end %>

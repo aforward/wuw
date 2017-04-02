@@ -14,7 +14,7 @@ defmodule WuwWeb.Web.AccountController do
 
   def list(conn, _opts) do
     render conn,
-      accounts: Account.latest_for(conn.assigns[:user]),
+      grouped_accounts: Account.latest_for(conn.assigns[:user]),
       layout: {WuwWeb.Web.LayoutView, "partial.html"}
   end
 
