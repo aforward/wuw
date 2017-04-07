@@ -31,7 +31,7 @@ defmodule Biz.Account do
   def changeset(model, params \\ %{}) do
     model
     |> cast(params, [:name, :slug, :amount, :type, :user_id])
-    |> ChangesetMerger.derive_if_missing(:name, :slug, &Slug.generate/1)
+    |> ChangesetMerger.Slug.derive_if_missing
     |> foreign_key_constraint(:user_id)
   end
 
