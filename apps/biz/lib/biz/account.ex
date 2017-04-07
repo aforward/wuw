@@ -4,7 +4,6 @@ defmodule Biz.Account do
   import Ecto.Query, only: [from: 2]
 
   alias Biz.{Account,User,Slug,Repo}
-  alias ChangesetMerger.Change
 
   @derive {Poison.Encoder, only: [:name, :slug, :amount, :type]}
   schema "accounts" do
@@ -32,7 +31,7 @@ defmodule Biz.Account do
   def changeset(model, params \\ %{}) do
     model
     |> cast(params, [:name, :slug, :amount, :type, :user_id])
-    |> Change.derive_if_missing(:name, :slug, &Slug.generate/1)
+    |> ChangesetMerger.derive_if_missing(:name, :slug, &Slug.generate/1)
     |> foreign_key_constraint(:user_id)
   end
 

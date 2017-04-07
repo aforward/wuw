@@ -33,7 +33,7 @@ defmodule Biz.Mixfile do
      {:ecto, "~> 2.1.3"},
      {:postgrex, ">= 0.13.0"},
      {:slugger, "~> 0.1.0"},
-     {:changeset_merger, "~> 0.2.0"}]
+     {:changeset_merger, "~> 0.3.0"}]
   end
 
 end
